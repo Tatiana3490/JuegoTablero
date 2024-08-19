@@ -13,7 +13,7 @@ public class JuegoTablero {
     public JuegoTablero() {
         scanner = new Scanner(System.in);
         int tamanoTablero = obtenerTamanoTablero();
-        seleccionarDificultad(); // Selección de la dificultad
+        seleccionarDificultad();
 
         tablero1 = new Tablero(tamanoTablero);
         tablero2 = new Tablero(tamanoTablero);
@@ -21,17 +21,17 @@ public class JuegoTablero {
         jugador2 = new Jugador('2');
         juegoTerminado = false;
 
-        configurarJuego(); // Configurar el juego al inicio
+        configurarJuego();
         inicializarJuego();
     }
 
     private int obtenerTamanoTablero() {
         int tamano = 0;
         while (tamano < 4 || tamano > 10) {
-            System.out.println("Ingresa el tamaño del tablero (entre 4 y 10):");
+            System.out.println("Introduce el tamaño del tablero (entre 4 (4x4) y 10 (10x10):");
             tamano = scanner.nextInt();
             if (tamano < 4 || tamano > 10) {
-                System.out.println("Tamaño no válido. Por favor, ingrese un valor entre 4 y 10.");
+                System.out.println("Tamaño no válido. Por favor, introduzca un valor entre 4 y 10.");
             }
         }
         return tamano;
@@ -97,7 +97,7 @@ public class JuegoTablero {
             tablero.mostrarTablero();
         }
 
-        System.out.println("Ingresa su movimiento (por ejemplo, 2W):");
+        System.out.println("Introduce tu movimiento (por ejemplo, 2W):");
         String movimiento = scanner.nextLine();
 
         while (!esMovimientoValido(movimiento)) {

@@ -15,7 +15,7 @@ public class Tablero {
     private void inicializarTablero() {
         for (int i = 0; i < tamano; i++) {
             for (int j = 0; j < tamano; j++) {
-                tablero[i][j] = 'L'; // Todas las casillas libres inicialmente
+                tablero[i][j] = 'L';
             }
         }
     }
@@ -39,7 +39,7 @@ public class Tablero {
                 x = random.nextInt(tamano);
                 y = random.nextInt(tamano);
             }
-            tablero[x][y] = 'E'; // Representamos los enemigos con 'E'
+            tablero[x][y] = 'E';
         }
     }
 
@@ -51,7 +51,7 @@ public class Tablero {
                 x = random.nextInt(tamano);
                 y = random.nextInt(tamano);
             }
-            tablero[x][y] = 'V'; // Representamos las vidas extras con 'V'
+            tablero[x][y] = 'V';
         }
     }
 
@@ -63,7 +63,7 @@ public class Tablero {
                 x = random.nextInt(tamano);
                 y = random.nextInt(tamano);
             }
-            tablero[x][y] = 'B'; // Representamos las bombas con 'B'
+            tablero[x][y] = 'B';
         }
     }
 
@@ -74,7 +74,7 @@ public class Tablero {
             x = random.nextInt(tamano);
             y = random.nextInt(tamano);
         }
-        tablero[x][y] = 'S'; // Representamos la salida con 'S'
+        tablero[x][y] = 'S';
     }
 
     public void mostrarTablero() {
